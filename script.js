@@ -53,6 +53,7 @@ function displayWeather(weatherData) {
     cityDisplay.innerText = weatherData.city_name;
     dateDisplay.innerText = weatherData.ob_time;
     iconDisplay.src = `https://www.weatherbit.io/static/img/icons/${weatherData.weather.icon}.png`
+    iconDisplay.removeAttribute("hidden");
     tempDisplay.innerText = `${weatherData.temp}\u00B0F`
     cloudDisplay.innerText = `${weatherData.clouds}% covered`
     windDisplay.innerText = `Winds ${weatherData.wind_cdir} ${weatherData.wind_spd} mph`
